@@ -1,0 +1,136 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Pie Chart</title>
+<style>
+body {
+	font-family:Tahoma, Geneva, sans-serif;
+}
+h2 {
+	text-align:center;
+}
+.chart {
+	position:relative;
+	width:500px;
+	height:250px;
+}
+.hold {
+	position:absolute;
+	width:200px;
+	height:200px;
+	clip:rect(0px,200px,200px,100px);
+	left:300px;
+}
+.pie {
+	position:absolute;
+	width:200px;
+	height:200px;
+	clip:rect(0px,100px,200px,0px);
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px; 
+	border-radius:100px; 
+}
+.hold.gt50 {
+	clip:rect(auto, auto, auto, auto);
+}
+.pie.fill {
+	-moz-transform:rotate(180deg) !important;
+	-webkit-transform:rotate(180deg) !important;
+	-o-transform:rotate(180deg) !important;
+	transform:rotate(180deg) !important;
+}
+.legend {
+	clear:left;
+	float:left;
+	font-size:12px;
+	border:2px solid grey;
+	padding:5px;
+	width:200px;
+}
+.legend DIV {
+	margin:3px 0;
+}
+.legend span {
+	float:right;
+	padding-left:.5em;
+}
+#os-Win {
+	margin-left:10px;
+	margin-top:10px;
+}
+#os-Win .pie {
+	background-color:blue;
+	border-color:blue;
+	-moz-transform:rotate(229.32deg); 
+	-webkit-transform:rotate(229.32deg); 
+	-o-transform:rotate(229.32deg);
+	transform:rotate(229.32deg);
+}
+#os-Win-lbl {
+	border-left:blue solid 1em;
+	padding-left:.5em;
+}
+#os-Mac {
+	-moz-transform:rotate(229.32deg); 
+	-webkit-transform:rotate(229.32deg);
+	-o-transform:rotate(229.32deg); 
+	transform:rotate(229.32deg); 
+}
+#os-Mac .pie {
+	background-color:purple;
+	border-color:purple;
+	-moz-transform:rotate(21.6deg); 
+	-webkit-transform:rotate(21.6deg);
+	-o-transform:rotate(21.6deg); 
+	transform:rotate(21.6deg); 
+}
+#os-Mac-lbl {
+	border-left:purple solid 1em;
+	padding-left:.5em;
+}
+#os-Other {
+	-moz-transform:rotate(250.92deg); 
+	-webkit-transform:rotate(250.92deg); 
+	-o-transform:rotate(250.92deg); 
+	transform:rotate(250.92deg); 
+}
+#os-Other .pie {
+	background-color:grey;
+	border-color:grey;
+	-moz-transform:rotate(109.44deg); 
+	-webkit-transform:rotate(109.44deg); 
+	-o-transform:rotate(109.44deg); 
+	transform:rotate(109.44deg); 
+}
+#os-Other-lbl {
+	border-left:grey solid 1em;
+	padding-left:.5em;
+}
+</style>
+</head>
+<body>
+</div>
+<div class="chart">
+  <h2>Operating System</h2>
+  <div class="legend">
+    <div id="os-Win-lbl">Windows <span>63.7%</span></div>
+    <div id="os-Mac-lbl">Macintosh <span>6.0%</span></div>
+
+    <div id="os-Other-lbl">Other<span>30.4%</span></div>
+  </div>
+  <div id="os-Win" class="hold gt50">
+    <div class="pie"></div>
+    <div class="pie fill"></div>
+  </div>
+  <div id="os-Mac" class="hold">
+    <div class="pie"></div>
+
+  </div>
+  <div id="os-Other" class="hold">
+    <div class="pie"></div>
+  </div>
+</div>
+
+</body>
+</html>
